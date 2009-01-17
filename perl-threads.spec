@@ -1,7 +1,7 @@
 
 %define realname   threads
 %define version    1.71
-%define release    %mkrel 1
+%define release    %mkrel 2
 
 Name:       perl-%{realname}
 Version:    %{version}
@@ -24,6 +24,7 @@ BuildRequires: perl(overload)
 BuildRequires: perl(strict)
 BuildRequires: perl(warnings)
 
+Provides: perl(threads)
 
 
 %description
