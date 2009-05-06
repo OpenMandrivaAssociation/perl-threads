@@ -9,7 +9,7 @@ Release:    %{release}
 License:    GPL or Artistic
 Group:      Development/Perl
 Summary:    Perl interpreter-based threads
-Source:     http://www.cpan.org/modules/by-module//%{realname}-%{version}.tar.gz
+Source:     http://search.cpan.org/CPAN/authors/id/J/JD/JDHEDDEN/%{realname}-%{version}.tar.gz
 Url:        http://search.cpan.org/dist/%{realname}
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-devel
