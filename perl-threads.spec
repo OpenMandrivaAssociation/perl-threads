@@ -1,7 +1,7 @@
 
 %define realname   threads
-%define version    1.71
-%define release    %mkrel 3
+%define version    1.72
+%define release    %mkrel 1
 
 Name:       perl-%{realname}
 Version:    %{version}
