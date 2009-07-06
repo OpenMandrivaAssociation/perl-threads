@@ -1,17 +1,16 @@
+%define upstream_name    threads
+%define upstream_version 1.73
 
-%define realname   threads
-%define version    1.72
-%define release    %mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
-Summary:    Perl interpreter-based threads
-Source:     http://search.cpan.org/CPAN/authors/id/J/JD/JDHEDDEN/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Summary: Perl interpreter-based threads
+License: GPL+ or Artistic
+Group:   Development/Perl
+Url:     http://search.cpan.org/dist/%{upstream_name}
+Source0: http://search.cpan.org/CPAN/authors/id/J/JD/JDHEDDEN/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl-devel
 BuildRequires: perl(Carp)
 BuildRequires: perl(Config)
@@ -21,10 +20,8 @@ BuildRequires: perl(IO::File)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(XSLoader)
 BuildRequires: perl(overload)
-BuildRequires: perl(strict)
-BuildRequires: perl(warnings)
-
-Provides: perl(threads)
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+Provides:  perl(threads)
 
 
 %description
@@ -42,7 +39,7 @@ variables are by default thread local. To use shared variables one must
 also use the threads::shared manpage:
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -63,5 +60,4 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
 
