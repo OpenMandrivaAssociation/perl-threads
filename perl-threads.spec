@@ -1,9 +1,9 @@
 %define upstream_name    threads
-%define upstream_version 1.74
+%define upstream_version 1.75
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary: Perl interpreter-based threads
 License: GPL+ or Artistic
