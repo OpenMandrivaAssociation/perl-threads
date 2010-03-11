@@ -1,5 +1,5 @@
 %define upstream_name    threads
-%define upstream_version 1.75
+%define upstream_version 1.76
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
