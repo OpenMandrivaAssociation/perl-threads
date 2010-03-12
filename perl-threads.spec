@@ -11,7 +11,6 @@ Group:   Development/Perl
 Url:     http://search.cpan.org/dist/%{upstream_name}
 Source0: http://search.cpan.org/CPAN/authors/id/J/JD/JDHEDDEN/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: perl-devel
 BuildRequires: perl(Carp)
 BuildRequires: perl(Config)
 BuildRequires: perl(ExtUtils::testlib)
@@ -20,9 +19,11 @@ BuildRequires: perl(IO::File)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(XSLoader)
 BuildRequires: perl(overload)
+BuildRequires: perl(threads::shared)
+BuildRequires: perl-devel
+
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 Provides:  perl(threads)
-
 
 %description
 Perl 5.6 introduced something called interpreter threads. Interpreter
@@ -60,4 +61,3 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
