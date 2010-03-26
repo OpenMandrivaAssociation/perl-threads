@@ -1,5 +1,5 @@
 %define upstream_name    threads
-%define upstream_version 1.76
+%define upstream_version 1.77
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -19,7 +19,6 @@ BuildRequires: perl(IO::File)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(XSLoader)
 BuildRequires: perl(overload)
-BuildRequires: perl(threads::shared)
 BuildRequires: perl-devel
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
