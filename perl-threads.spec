@@ -1,15 +1,15 @@
 %define upstream_name    threads
-%define upstream_version 1.81
+%define upstream_version 1.87
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	2
+Version:    %perl_convert_version 1.87
+Release:	1
 
 Summary: Perl interpreter-based threads
 License: GPL+ or Artistic
 Group:   Development/Perl
 Url:     http://search.cpan.org/dist/%{upstream_name}
-Source0: http://search.cpan.org/CPAN/authors/id/J/JD/JDHEDDEN/%{upstream_name}-%{upstream_version}.tar.gz
+Source0: http://www.cpan.org/authors/id/J/JD/JDHEDDEN/threads-1.87.tar.gz
 
 BuildRequires: perl(Carp)
 BuildRequires: perl(Config)
@@ -126,4 +126,5 @@ rm -rf %buildroot
 
 * Sat Jan 17 2009 cpan2dist 1.71-1mdv
 - initial mdv release, generated with cpan2dist
+
 
