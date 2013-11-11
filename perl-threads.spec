@@ -1,15 +1,15 @@
 %define upstream_name    threads
-%define upstream_version 1.87
+%define upstream_version 1.89
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version 1.87
+Version:    %perl_convert_version %{upstream_version}
 Release:	1
 
 Summary: Perl interpreter-based threads
 License: GPL+ or Artistic
 Group:   Development/Perl
 Url:     http://search.cpan.org/dist/%{upstream_name}
-Source0: http://www.cpan.org/authors/id/J/JD/JDHEDDEN/threads-1.87.tar.gz
+Source0: http://search.cpan.org/CPAN/authors/id/J/JD/JDHEDDEN/threads-%{upstream_version}.tar.gz
 
 BuildRequires: perl(Carp)
 BuildRequires: perl(Config)
@@ -21,7 +21,6 @@ BuildRequires: perl(XSLoader)
 BuildRequires: perl(overload)
 BuildRequires: perl-devel
 
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 Provides:  perl(threads)
 
 %description
@@ -49,14 +48,11 @@ also use the threads::shared manpage:
 make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
 %clean
-rm -rf %buildroot
 
 %files
-%defattr(-,root,root)
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
@@ -126,5 +122,6 @@ rm -rf %buildroot
 
 * Sat Jan 17 2009 cpan2dist 1.71-1mdv
 - initial mdv release, generated with cpan2dist
+
 
 
