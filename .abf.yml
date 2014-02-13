@@ -1,5 +1,6 @@
 removed_sources:
   threads-1.81.tar.gz: 259b637a1aabd23db5ae3855e439fb062fb9117c
   threads-1.87.tar.gz: 3810a65eab1209c2c81fee21fd378f8baa97662a
-sources:
   threads-1.89.tar.gz: 0f8caa1330fcd73b7a58730178857e1d58475490
+sources:
+  threads-1.92.tar.gz: 3f2b581163340a08821f88b50a1be17e2c138c53
